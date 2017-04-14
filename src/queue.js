@@ -1,18 +1,18 @@
 class Queue {
   constructor() {
-    this.queue = [];
+
   }
 
   get size() {
-    return this.queue.length;
+
   }
 
-  enqueue(obj) {
-    this.queue.push(obj);
+  enqueue() {
+
   }
 
   dequeue() {
-    return this.queue.shift();
+
   }
 }
 
