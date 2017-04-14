@@ -12,7 +12,7 @@ class Stack {
   }
 
   remove() {
-    return this.stack.pop();
+
   }
 }
 
