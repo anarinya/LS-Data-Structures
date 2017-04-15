@@ -22,7 +22,8 @@ class HashTable {
       for (let i = 0; i < currentValueArr.length; i++) {
         if (currentValueArr[i].value === value) return;
       }
-      this.storage.set(index, [{ key, value }]);
+      currentValueArr.push({ key, value });
+      this.storage.set(index, currentValueArr);
     }
   }
 
@@ -38,7 +39,9 @@ class HashTable {
     const index = getIndexBelowMax(key.toString(), this.limit);
     const currentValueArr = this.storage.get(index);
     for (let i = 0; i < currentValueArr.length; i++) {
-      if (currentValueArr[i] === key) return currentValueArr[i].pop();
+      if (currentValueArr[i].key === key) {
+        currentValueArr[i].value = null;
+      }
     }
   }
 }
