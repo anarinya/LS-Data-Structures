@@ -14,7 +14,7 @@ class HashTable {
 
     for (let i = 0; i < this.storage.length; i++) {
       if (this.storage) {
-        const valuesArray = this.storage[i];
+        const valuesArray = this.storage[i] || [];
         for (let j = 0; j < valuesArray.length; j++) {
           const key = valuesArray[j].key;
           const value = valuesArray[j].value;
